@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import getDataFromJson from '../../utilities/getData';
 import Button from '@material-ui/core/Button';
+import RentalRow from '../rentalRow';
 
 
 class Rental extends Component {
@@ -11,12 +12,9 @@ class Rental extends Component {
         super(props);
         this.state = {
             data: [],
-            quantityMale: 0,
-            quantityFemale: 0,
-            quantityUnisex: 0,
-            quantity: 0
         }
         this.getData = this.getData.bind(this);
+       
 
     }
 
@@ -24,6 +22,7 @@ class Rental extends Component {
     componentDidMount() {
         this.getData();
     }
+    
     getData() {
         //intial values for sorting
         let indexArr = [1, 2, 3];
@@ -31,18 +30,7 @@ class Rental extends Component {
         this.setState({ data: data });
     }
 
-    handleClick() {
-        alert("clicked");
-    }
-
-    IncrementItem = () => {
-        this.setState({ quantity: this.state.quantity + 1 });
-    }
-    DecreaseItem = () => {
-        this.setState({ quantity: this.state.quantity - 1 });
-    }
-
-
+  
 
 
 
@@ -56,20 +44,12 @@ class Rental extends Component {
                     justify="center"
                     alignItems="center"
                     spacing={4}>
-                    {this.state.data.map((rentals, index) => {
-                        return <Grid item xs={10} sm={3} key={index}>
-                            <Paper>
-                                <img src={rentals.image}></img>
-                                <h1>{rentals.name}</h1>
-                                <h3>Price: ${rentals.price}</h3>
-                                <Button onClick={this.IncrementItem} color="primary" variant="outlined">+</Button>
-                                <Button variant="outlined">{this.state.quantity}</Button>
-                                <Button onClick={this.DecreaseItem} color="secondary" variant="outlined">-</Button>
-                                <br></br><br></br>
-                                <Button variant="outlined" color="primary">Add</Button>
-                            </Paper>
-                        </Grid>
-                    })}
+                    {this.state.data.map((rental, index) => {
+                        return(
+
+<RentalRow data={rental} key={index} />
+                        )
+})}
                 </Grid>
 
                 <br></br>
