@@ -39,18 +39,19 @@ class Insurance extends Component {
                     justify="center"
                     alignItems="center"
                     spacing={3}>
-                    <Grid item xs={10} sm={3}>
-                        {this.state.data.map((rental, index) => {
-                            return (
+                    {this.state.data.map((rental, index) => {
+                        return (
+                            <Grid item xs={10} sm={3}>
                                 <InsuranceRow data={rental} key={index} />
-                            )
-                        })}
-                    </Grid>
+                            </Grid>
+
+                        )
+                    })}
                 </Grid>
-                <br></br>
-                <Button color="secondary" variant="contained" href="/accesories">Back</Button>
-                <br></br><br></br>
+                <br></br>                
                 <Button color="primary" variant="contained" href="/summary">Next</Button>
+                <br></br><br></br>
+                <Button color="secondary" variant="contained" href="/accesories">Back</Button>
             </div>
         );
     }

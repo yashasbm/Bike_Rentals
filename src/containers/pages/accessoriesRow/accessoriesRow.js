@@ -6,9 +6,19 @@ class AccessoriesRow extends Component {
 
     constructor(props) {
         super(props);
+        let maleBike = 1*localStorage.getItem("1");
+        let femaleBike = 1*localStorage.getItem("2");
+        let kidsBike = 1*localStorage.getItem("3");
+
+        let adultBikes = (1*maleBike)+(1*femaleBike);
+
         this.state = {
-            accessories: 0
+            accessories: 0,
+            adultBikes:adultBikes,
+            kidsBike:kidsBike
         }
+
+        //
         this.IncrementItem = this.IncrementItem.bind(this);
         this.DecreaseItem = this.DecreaseItem.bind(this);
         this.passData = this.passData.bind(this);
@@ -16,18 +26,21 @@ class AccessoriesRow extends Component {
 
     //increments the count for the accessories
     IncrementItem = () => {
+        //if(this.props.data.id===4 < this.adultBikes || this.props.data.id===5 < this.kidsBike)
         this.setState({ accessories: this.state.accessories + 1 });
     }
 
     //decrements the count for the accessories
     DecreaseItem = () => {
-        if (this.state.quantity > 0)
+        if (this.state.accessories > 0)
         this.setState({ accessories: this.state.accessories - 1 });
     }
 
     //stores the user selected count for each accessories
     passData() {
         localStorage.setItem(this.props.data.id, this.state.accessories);
+        localStorage.setItem(this.props.data.name, this.state.price);
+        console.log("name: "+ this.props.data.name + "price: " + this.props.data.price);
     }
 
     render() {

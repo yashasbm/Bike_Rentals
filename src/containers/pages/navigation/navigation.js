@@ -12,7 +12,7 @@ class Rental extends Component {
 
         return (
             <div>
-                <AppBar position="static" color="default">
+                <AppBar position="static" color="primary">
                     <Toolbar>
                         <Typography variant="h6" color="inherit">
                             Bike Rentals - NYC

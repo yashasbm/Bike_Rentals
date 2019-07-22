@@ -37,13 +37,13 @@ class Rental extends Component {
                     justify="center"
                     alignItems="center"
                     spacing={3}>
-                    <Grid item xs={10} sm={3}>
                         {this.state.data.map((rental, index) => {
                             return (
-                                <RentalRow data={rental} key={index} />
+                                <Grid item xs={10} sm={3}>
+                                    <RentalRow data={rental} key={index} />
+                                </Grid>
                             )
                         })}
-                    </Grid>
                 </Grid>
                 <br></br>
                 <Button color="primary" variant="contained" href="/accesories">Next</Button>

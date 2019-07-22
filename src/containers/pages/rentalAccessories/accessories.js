@@ -39,22 +39,21 @@ class Accessories extends Component {
                         justify="center"
                         alignItems="center"
                         spacing={3}>
-                        <Grid item xs={10} sm={3}>
                             {this.state.data.map((acc, index) => {
                                 return (
-                                    <AccessoriesRow data={acc} key={index} />
+                                    <Grid item xs={10} sm={3}>
+                                        <AccessoriesRow data={acc} key={index} />
+                                    </Grid>
                                 )
 
                             })}
-                        </Grid>
                     </Grid>
                 </div>
 
                 <br></br>
-                <Button color="secondary" variant="contained" href="/">Back</Button>
-                <br></br><br></br>
                 <Button color="primary" variant="contained" href="/insurance">Next</Button>
-
+                <br></br><br></br>
+                <Button color="secondary" variant="contained" href="/">Back</Button>
             </div>
 
         );

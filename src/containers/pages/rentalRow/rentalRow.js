@@ -29,6 +29,7 @@ class RentalRow extends Component {
     //stores the user selected count for each bike
     passData() {
         localStorage.setItem(this.props.data.id, this.state.quantity);
+        localStorage.setItem(this.props.data.name, this.props.data.price);
     }
 
     render() {
@@ -46,6 +47,7 @@ class RentalRow extends Component {
 
                             {/* bikes price */}
                             <h3>Price: ${this.props.data.price}</h3>
+                            
                             <Button onClick={this.IncrementItem} color="primary" variant="outlined">+</Button>
                             <Button variant="outlined">{this.state.quantity}</Button>
                             <Button onClick={this.DecreaseItem} color="secondary" variant="outlined">-</Button>
