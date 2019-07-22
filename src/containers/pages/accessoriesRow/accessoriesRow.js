@@ -1,34 +1,33 @@
 import React, { Component } from "react";
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
 
-
-class RentalRow extends Component {
+class AccessoriesRow extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            quantity: 0
+            accessories: 0
         }
         this.IncrementItem = this.IncrementItem.bind(this);
         this.DecreaseItem = this.DecreaseItem.bind(this);
         this.passData = this.passData.bind(this);
     }
 
-    //increments the count for the bikes
-    IncrementItem() {
-        this.setState({ quantity: this.state.quantity + 1 });
-    }
-    
-    //decrements the count for the bikes
-    DecreaseItem() {
-        if (this.state.quantity > 0)
-            this.setState({ quantity: this.state.quantity - 1 });
+    //increments the count for the accessories
+    IncrementItem = () => {
+        this.setState({ accessories: this.state.accessories + 1 });
     }
 
-    //stores the user selected count for each bike
+    //decrements the count for the accessories
+    DecreaseItem = () => {
+        if (this.state.quantity > 0)
+        this.setState({ accessories: this.state.accessories - 1 });
+    }
+
+    //stores the user selected count for each accessories
     passData() {
-        localStorage.setItem(this.props.data.id, this.state.quantity);
+        localStorage.setItem(this.props.data.id, this.state.accessories);
     }
 
     render() {
@@ -38,22 +37,21 @@ class RentalRow extends Component {
                 {this.props.data &&
                     <div>
                         <Paper >
-                            {/* bikes image */}
+                            {/* accessories image */}
                             <img src={this.props.data.image}></img>
 
-                            {/* bikes name */}
+                            {/* accessories name */}
                             <h1>{this.props.data.name}</h1>
 
-                            {/* bikes price */}
+                            {/* accessories price */}
                             <h3>Price: ${this.props.data.price}</h3>
                             <Button onClick={this.IncrementItem} color="primary" variant="outlined">+</Button>
-                            <Button variant="outlined">{this.state.quantity}</Button>
+                            <Button variant="outlined">{this.state.accessories}</Button>
                             <Button onClick={this.DecreaseItem} color="secondary" variant="outlined">-</Button>
                             <br></br><br></br>
                             <Button variant="outlined" color="primary" onClick={this.passData}>Add</Button>
                         </Paper>
                     </div>
-
                 }
                 <br></br>
             </div>
@@ -61,5 +59,4 @@ class RentalRow extends Component {
     }
 }
 
-export default RentalRow;
-
+export default AccessoriesRow;
