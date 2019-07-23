@@ -1,14 +1,14 @@
 # UI Screenshots
 
-![Insurance-Page-withValues-exceedingBikeSelection](https://user-images.githubusercontent.com/16335340/61679879-b23f1180-acd5-11e9-8e2a-29e404b85867.JPG)
 ![Landing-Page](https://user-images.githubusercontent.com/16335340/61679880-b23f1180-acd5-11e9-9b00-773c1ddb2b51.JPG)
 ![Landing-Page-withValues](https://user-images.githubusercontent.com/16335340/61679881-b23f1180-acd5-11e9-9e4b-4eaf335195a3.JPG)
-![Summary-Page](https://user-images.githubusercontent.com/16335340/61679883-b2d7a800-acd5-11e9-976f-2065034281b3.JPG)
-![Summary-Page-withTotal](https://user-images.githubusercontent.com/16335340/61679884-b2d7a800-acd5-11e9-9fdb-16fac7623a23.JPG)
 ![Accessories-Page](https://user-images.githubusercontent.com/16335340/61679885-b2d7a800-acd5-11e9-8279-6350f40c7039.JPG)
 ![Accessories-Page-withValues](https://user-images.githubusercontent.com/16335340/61679886-b2d7a800-acd5-11e9-8a54-39f388d116bd.JPG)
 ![Insurance-Page](https://user-images.githubusercontent.com/16335340/61679887-b2d7a800-acd5-11e9-9f99-d5d1d5f8ba86.JPG)
 ![Insurance-Page-withValues](https://user-images.githubusercontent.com/16335340/61679888-b2d7a800-acd5-11e9-83f2-83d40c6c8ae6.JPG)
+![Insurance-Page-withValues-exceedingBikeSelection](https://user-images.githubusercontent.com/16335340/61679879-b23f1180-acd5-11e9-8e2a-29e404b85867.JPG)
+![Summary-Page](https://user-images.githubusercontent.com/16335340/61679883-b2d7a800-acd5-11e9-976f-2065034281b3.JPG)
+![Summary-Page-withTotal](https://user-images.githubusercontent.com/16335340/61679884-b2d7a800-acd5-11e9-9fdb-16fac7623a23.JPG)
 
 
 
